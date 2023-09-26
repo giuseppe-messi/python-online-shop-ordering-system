@@ -207,8 +207,6 @@ Detailed description of each class used in this project!
 
 Description of utility functions used in the program!
 
-#### Payment Class
-
 | Function Name                    | Description                                                                                                                                                                                    |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | handle_operation_errors(method)  | A decorator function that catches common error types (TypeError, ValueError, KeyError) when calling other functions and prints error messages if they occur.                                   |
