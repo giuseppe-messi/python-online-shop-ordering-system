@@ -22,7 +22,19 @@ Also, import some utility functions:
 from utils import print_store_matrix, create_items_matrix
 ```
 
+---
+
+---
+
+---
+
 From this point, you can interact with the program, calling all the methods available to create an online store.
+
+---
+
+---
+
+---
 
 Create an instance of a store.
 
