@@ -141,7 +141,9 @@ payment_giuseppe.make_payment()
 
 ## Classes
 
-> Store
+> Detailed description of each class used in this project!
+
+### Store Class
 
 | Properties/Methods      | Description                                            |
 | ----------------------- | ------------------------------------------------------ |
