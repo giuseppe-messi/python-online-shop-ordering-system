@@ -139,12 +139,10 @@ payment_giuseppe = Payment(giuseppe)
 payment_giuseppe.make_payment()
 ```
 
----
-
 ## Classes
 
-a detailed description of each class used in this project
+> To start syncing your workspace, just sign in with Google in the menu.
 
----
+`Store`
 
 ### Thanks! I hope you enjoyed my simple online shopping system!
