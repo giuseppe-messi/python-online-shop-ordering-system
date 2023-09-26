@@ -203,6 +203,10 @@ Detailed description of each class used in this project!
 | order              | Property to store a reference to the customer's order.                     |
 | make_payment()     | Method to process a payment for the customer's order.                      |
 
+[Leave a blank line here]
+[Leave a blank line here]
+[Leave a blank line here]
+
 ## Utility Functions
 
 Description of utility functions used in the program!
