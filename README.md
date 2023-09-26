@@ -1,6 +1,6 @@
 # Welcome to my online shop ordering system in Python!
 
-## Some suggestions on how to view this project:
+### Some suggestions on how to view this project:
 
 Navigate to the project root directory in the terminal and open the Python interpreter:
 
