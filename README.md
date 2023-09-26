@@ -149,14 +149,14 @@ Detailed description of each class used in this project!
 
 #### Store Class
 
-| Properties/Methods      | Description                                          |
-| ----------------------- | ---------------------------------------------------- |
-| categories              | A dictionary to store categories as key-value pairs. |
-| items                   | A dictionary to store items as key-value pairs.      |
-| add_category(name)      | Method to add a new category to the store.           |
-| add_item(item_info)     | Method to add a new item to the store.               |
-| get_item_by_id(item_id) | Method to retrieve an item by its ID.                |
-| delete_item(id)         | Method to delete an item from the store by its ID.   |
+| Properties/Methods      | Description                                          | Space/Time Complexity |
+| ----------------------- | ---------------------------------------------------- | --------------------- |
+| categories              | A dictionary to store categories as key-value pairs. | O(1)/O(1)             |
+| items                   | A dictionary to store items as key-value pairs.      | O(1)/O(1)             |
+| add_category(name)      | Method to add a new category to the store.           | O(1)/O(1)             |
+| add_item(item_info)     | Method to add a new item to the store.               | O(1)/O(1)             |
+| get_item_by_id(item_id) | Method to retrieve an item by its ID.                | O(1)/O(1)             |
+| delete_item(id)         | Method to delete an item from the store by its ID.   | O(1)/O(1)             |
 
 #### Category Class
 
