@@ -154,8 +154,6 @@ Detailed description of each class used in this project!
 | get_item_by_id(item_id) | Method to retrieve an item by its ID.                |
 | delete_item(id)         | Method to delete an item from the store by its ID.   |
 
----
-
 #### Category Class
 
 | Properties/Methods | Description                                               |
@@ -163,8 +161,6 @@ Detailed description of each class used in this project!
 | name               | Property to store the name of the category.               |
 | items              | A dictionary to store items within the category.          |
 | add_item(item)     | Method to add an item to the category's items dictionary. |
-
----
 
 #### Item Class
 
