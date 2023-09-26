@@ -141,9 +141,7 @@ payment_giuseppe.make_payment()
 
 ## Classes
 
-> To start syncing your workspace, just sign in with Google in the menu.
-
-`Store`
+> Store
 
 | Properties/Methods      | Description                                            |
 | ----------------------- | ------------------------------------------------------ |
