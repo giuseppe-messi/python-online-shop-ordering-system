@@ -3,7 +3,7 @@ def handle_operation_errors(method):
         try:
             return method(*args, **kwargs)
         except (TypeError, ValueError, KeyError) as e:
-            print("Error: {}".format(e))
+            print(f"Error: {e}")
 
     return wrapper
 
@@ -20,15 +20,14 @@ def is_valid_item_info(item_info):
         "id": int,
         "name": str,
         "price": (float, int),
-        "stock": int,
         "product_category": str,
     }
 
     for field, field_type in required_fields.items():
         if field not in item_info:
-            raise KeyError("{} field is not defined!".format(field))
+            raise KeyError(f"{field} field is not defined!")
         elif not isinstance(item_info[field], field_type):
-            raise TypeError("Invalid type for field: {}".format(field))
+            raise TypeError(f"Invalid type for field: {field}")
 
     return True
 
@@ -43,9 +42,9 @@ def is_valid_customer(customer_info):
 
     for field, field_type in required_fields.items():
         if field not in customer_info:
-            raise KeyError("{} field is not defined!".format(field))
+            raise KeyError(f"{field} field is not defined!")
         elif not isinstance(customer_info[field], field_type):
-            raise TypeError("Invalid type for field: {}".format(field))
+            raise TypeError("Invalid type for field: {field}")
 
     return True
 
@@ -80,10 +79,8 @@ def print_store_matrix(matrix):
 
 
 def create_items_matrix(store):
-    matrix = [["Item", "Stock", "Price", "Category", "Id"]]
+    matrix = [["Item", "Price", "Category", "Id"]]
 
     for item in store.items.values():
-        matrix.append(
-            [item.name, item.stock, item.price, item.product_category, item.id]
-        )
+        matrix.append([item.name, item.price, item.product_category, item.id])
     return matrix

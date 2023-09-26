@@ -47,8 +47,7 @@ class Store:
 
     @handle_operation_errors
     def delete_item(self, id):
-        ids = [item.id for item in self.items.values()]
-        if id in ids:
+        if id in self.items:
             del self.items[id]
             print(f"Item with id: {id} removed from store!")
         else:

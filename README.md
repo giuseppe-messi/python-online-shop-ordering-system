@@ -2,14 +2,14 @@
 
 <br>
 
-> to best view this README file you can either use a text editor that support markdown preview, or you could visit the github repository where this project live! this is the link:
+> READ THIS FIRST: to best view this README file, use a text editor that supports markdown preview or visit the GitHub repository where this project lives! This is the link:
 > https://github.com/giuseppe-messi/python-online-shop-ordering-system
 
 <br>
 
-The following is just a flow example on how to populate the store with categories and items and how a customer can add items to their order and then make a payment.
+The following is a flow example of how to populate the store with categories and items and how a customer can add items to their order and then pay.
 
-Following this example are detailed descriptions of each class used to create this project!
+At the end, detailed descriptions of each class used to create this project are detailed!
 
 <br>
 
@@ -21,7 +21,7 @@ Navigate to the project root directory in the terminal and open the Python inter
 python3
 ```
 
-In order to properly run the program from the interpreter, we need to import some files; open and execute the store, customer and payment class:
+To properly run the program from the interpreter, we need to import some files, which are the store, customer and payment classes:
 
 ```python
 exec(open("store.py").read())
@@ -78,7 +78,6 @@ store.add_item({
     "id": 1,
     "name": "phone",
     "price": 10,
-    "stock": 2,
     "product_category": "technology",
 })
 ```
@@ -89,10 +88,9 @@ A poorly formatted item would have one of the mandatory values missing, some of 
 
 ```Python
 store.add_item({
-    "id": 2, "name":
-    "spoons",
+    "id": 2,
+    "name": "spoons",
     "price": 8,
-    "stock": 4,
     "product_category": "kitchen"
 })
 
@@ -100,7 +98,6 @@ store.add_item({
     "id": 3,
     "name": "TV",
     "price": 800,
-    "stock": 22,
     "product_category": "technology"
 })
 
@@ -108,7 +105,6 @@ store.add_item({
     "id": 4,
     "name": "speakers",
     "price": 200,
-    "stock": 6,
     "product_category": "technology",
 })
 
@@ -161,7 +157,7 @@ Detailed description of each class used in this project!
 | categories              | A dictionary to store categories as key-value pairs. |       O(n) - O(1)       |
 | items                   | A dictionary to store items as key-value pairs.      |       O(n) - O(1)       |
 | add_category(name)      | Method to add a new category to the store.           |       O(1) - O(1)       |
-| add_item(item_info)     | Method to add a new item to the store.               |       O(1) - O(n)       |
+| add_item(item_info)     | Method to add a new item to the store.               |       O(n) - O(n)       |
 | get_item_by_id(item_id) | Method to retrieve an item by its ID.                |       O(1) - O(1)       |
 | delete_item(id)         | Method to delete an item from the store by its ID.   |       O(1) - O(1)       |
 
@@ -186,6 +182,7 @@ Detailed description of each class used in this project!
 
 | Properties/Methods | Description                                                                    | Space - Time Complexity |
 | ------------------ | ------------------------------------------------------------------------------ | :---------------------: |
+| \_\_init\_\_       | in the constructor is_valid_customer function                                  |       O(1) - O(n)       |
 | store              | Property to store a reference to the store.                                    |       O(1) - O(1)       |
 | name               | Property to store the customer's name.                                         |       O(1) - O(1)       |
 | surname            | Property to store the customer's surname.                                      |       O(1) - O(1)       |
@@ -201,8 +198,8 @@ Detailed description of each class used in this project!
 | store                | Property to store a reference to the store associated with the order.                       |       O(1) - O(1)       |
 | items                | A dictionary to store items in the order.                                                   |       O(1) - O(1)       |
 | add_item(item_id)    | Method to add an item to the order by item ID.                                              |       O(1) - O(1)       |
-| get_total_price()    | Method to calculate and return the total price of the items in the order.                   |       O(1) - O(1)       |
-| view_order()         | Method to display the contents of the order, including item names, prices, and total price. |       O(1) - O(1)       |
+| get_total_price()    | Method to calculate and return the total price of the items in the order.                   |       O(n) - O(n)       |
+| view_order()         | Method to display the contents of the order, including item names, prices, and total price. |       O(n) - O(n)       |
 | remove_item(item_id) | Method to remove an item from the order by item ID.                                         |       O(1) - O(1)       |
 | clear_order()        | Method to clear all items from the order.                                                   |       O(1) - O(1)       |
 
@@ -212,7 +209,7 @@ Detailed description of each class used in this project!
 | ------------------ | -------------------------------------------------------------------------- | :---------------------: |
 | customer           | Property to store a reference to the customer associated with the payment. |       O(1) - O(1)       |
 | order              | Property to store a reference to the customer's order.                     |       O(1) - O(1)       |
-| make_payment()     | Method to process a payment for the customer's order.                      |       O(1) - O(1)       |
+| make_payment()     | Method to process a payment for the customer's order.                      |       O(n) - O(n)       |
 
 <br>
 
@@ -224,10 +221,10 @@ Description of utility functions used in the program!
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------: |
 | handle_operation_errors(method)  | A decorator function that catches common error types (TypeError, ValueError, KeyError) when calling other functions and prints error messages if they occur.                                   |       O(1) - O(1)       |
 | is_valid_category(name)          | Validates that the input name is a non-empty string and raises errors for invalid input types or empty names.                                                                                  |       O(1) - O(1)       |
-| is_valid_item_info(item_info)    | Validates the structure of item information in the item_info dictionary, checking for required fields and their data types.                                                                    |       O(1) - O(1)       |
-| is_valid_customer(customer_info) | Validates the structure of customer information in the customer_info dictionary, checking for required fields and their data types.                                                            |       O(1) - O(1)       |
-| print_store_matrix(matrix)       | Formats and prints a tabular matrix, adjusting column widths to align data neatly. It includes a header row, a separator, and content rows.s                                                   |       O(1) - O(1)       |
-| create_items_matrix(store)       | Generates a matrix (2D list) representing item information in a store, including item name, stock, price, category, and ID. This matrix can be used for tabular display or further processing. |       O(1) - O(1)       |
+| is_valid_item_info(item_info)    | Validates the structure of item information in the item_info dictionary, checking for required fields and their data types.                                                                    |       O(1) - O(n)       |
+| is_valid_customer(customer_info) | Validates the structure of customer information in the customer_info dictionary, checking for required fields and their data types.                                                            |       O(1) - O(n)       |
+| print_store_matrix(matrix)       | Formats and prints a tabular matrix, adjusting column widths to align data neatly. It includes a header row, a separator, and content rows.s                                                   |       O(n) - O(n)       |
+| create_items_matrix(store)       | Generates a matrix (2D list) representing item information in a store, including item name, stock, price, category, and ID. This matrix can be used for tabular display or further processing. |       O(n) - O(n)       |
 
 <br>
 
