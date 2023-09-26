@@ -145,4 +145,10 @@ payment_giuseppe.make_payment()
 
 `Store`
 
+| Class    | Properties                      | Methods                       |
+| -------- | ------------------------------- | ----------------------------- |
+| Store    | `'Isn't this fun?'`             | 'Isn't this fun?'             |
+| Category | `"Isn't this fun?"`             | "Isn't this fun?"             |
+| Item     | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
+
 ### Thanks! I hope you enjoyed my simple online shopping system!
