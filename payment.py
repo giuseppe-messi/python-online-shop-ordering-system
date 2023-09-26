@@ -15,9 +15,5 @@ class Payment:
             item_list = [item.name for item in self.order.items.values()]
             items_string = ", ".join(item_list)
             total = self.order.get_total_price()
+            self.order.clear_order()
             print(f"Sucess! You just bought: {items_string} for {total}")
-
-        # for item in self.order.items.values():
-        #     item.reduce_stock()
-
-        # self.order.clear_order()
