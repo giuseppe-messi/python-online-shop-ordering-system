@@ -1,4 +1,4 @@
-# Welcome to my online shop ordering system in Python!
+# Welcome to my online shop ordering system written in Python!
 
 <br>
 
@@ -7,7 +7,7 @@
 
 <br>
 
-The following is a flow example of how to populate the store with categories and items and how a customer can add items to their order and then pay.
+The following is a example of how to create and populate a store with categories and items and how customers can add items to their order and checkout by making a payment.
 
 At the end, descriptions of each class used to create this project are detailed!
 
@@ -37,7 +37,7 @@ from utils import print_store_matrix, create_items_matrix
 
 ---
 
-From this point, you can interact with the program, calling all the methods available to create an online store.
+At this point, you can interact with the program, calling all the methods available to create an online store.
 
 ---
 
@@ -47,14 +47,14 @@ Create an instance of a store.
 store = Store()
 ```
 
-Use the helper function to print the store items in a table format; it helps visualise the store state. I encourage you to call this function at any given time.
+Use the helper function to print the store state in a table format; I encourage you to call this function at any given time.
 
 ```python
 print_store_matrix(create_items_matrix(store))
 ```
 
 Use the `add_category` and `add_item` methods to populate the store.
-I encourage you to call these methods with non-string arguments to see the error handling.
+I encourage you to call these methods with wrong argument data to see the error handling.
 
 #### accepted category:
 
@@ -82,7 +82,7 @@ store.add_item({
 })
 ```
 
-A poorly formatted item would have one of the mandatory values missing, some of the values have an unexpected type, or that item ID already exists.
+A poorly formatted item would have one of the mandatory values missing, some of the values could have a wrong type, or that the item ID already exists.
 
 #### Let's add a few more and print the store table!!!
 
@@ -118,7 +118,7 @@ you can also delete an item by its id.
 store.delete_item(1)
 ```
 
-After the store has been populated, we can create a customer!
+After the store has been populated, we can create a customer instance!
 
 ```Python
 giuseppe = Customer(
@@ -132,7 +132,7 @@ giuseppe = Customer(
 )
 ```
 
-Now, via the `order` class inside the customer instance, you can add and delete items by ID and view the order; the item has to exist; otherwise, an error will happen.
+Now, we can add and delete items by their ID and view the order status via the `order` class inside the customer instance;
 
 ```python
 giuseppe.order.add_item(1)
@@ -140,7 +140,7 @@ giuseppe.order.add_item(4)
 giuseppe.order.view_order()
 ```
 
-Then we create a payment instance, which takes a customer as its only argument and calls the `make_payment` method:
+Finally, we create a payment instance, which takes a customer as its only argument and we can call the `make_payment` method:
 
 ```python
 payment_giuseppe = Payment(giuseppe)
