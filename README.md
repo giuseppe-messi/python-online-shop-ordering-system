@@ -171,4 +171,36 @@ Detailed description of each class used in this project!
 | price              | Property to store the price of the item.    |
 | product_category   | Property to store the category of the item. |
 
+#### Customer Class
+
+| Properties/Methods | Description                                                                    |
+| ------------------ | ------------------------------------------------------------------------------ |
+| store              | Property to store a reference to the store.                                    |
+| name               | Property to store the customer's name.                                         |
+| surname            | Property to store the customer's surname.                                      |
+| email              | Property to store the customer's email address.                                |
+| address            | Property to store the customer's address.                                      |
+| order              | Property to store an instance of the Order class associated with the customer. |
+
+#### Order Class
+
+| Properties/Methods   | Description                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------- |
+| customer             | Property to store a reference to the customer associated with the order.                    |
+| store                | Property to store a reference to the store associated with the order.                       |
+| items                | A dictionary to store items in the order.                                                   |
+| add_item(item_id)    | Method to add an item to the order by item ID.                                              |
+| get_total_price()    | Method to calculate and return the total price of the items in the order.                   |
+| view_order()         | Method to display the contents of the order, including item names, prices, and total price. |
+| remove_item(item_id) | Method to remove an item from the order by item ID.                                         |
+| clear_order()        | Method to clear all items from the order.                                                   |
+
+#### Payment Class
+
+| Properties/Methods | Description                                                                |
+| ------------------ | -------------------------------------------------------------------------- |
+| customer           | Property to store a reference to the customer associated with the payment. |
+| order              | Property to store a reference to the customer's order.                     |
+| make_payment()     | Method to process a payment for the customer's order.                      |
+
 ### Thanks! I hope you enjoyed my simple online shopping system!
