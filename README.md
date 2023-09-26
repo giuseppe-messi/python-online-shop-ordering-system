@@ -141,7 +141,7 @@ payment_giuseppe.make_payment()
 
 ## Classes
 
-> Detailed description of each class used in this project!
+Detailed description of each class used in this project!
 
 #### Store Class
 
@@ -154,6 +154,8 @@ payment_giuseppe.make_payment()
 | get_item_by_id(item_id) | Method to retrieve an item by its ID.                |
 | delete_item(id)         | Method to delete an item from the store by its ID.   |
 
+---
+
 #### Category Class
 
 | Properties/Methods | Description                                               |
@@ -161,5 +163,16 @@ payment_giuseppe.make_payment()
 | name               | Property to store the name of the category.               |
 | items              | A dictionary to store items within the category.          |
 | add_item(item)     | Method to add an item to the category's items dictionary. |
+
+---
+
+#### Item Class
+
+| Properties/Methods | Description                                 |
+| ------------------ | ------------------------------------------- |
+| id                 | Property to store the ID of the item.       |
+| name               | Property to store the name of the item.     |
+| price              | Property to store the price of the item.    |
+| product_category   | Property to store the category of the item. |
 
 ### Thanks! I hope you enjoyed my simple online shopping system!
