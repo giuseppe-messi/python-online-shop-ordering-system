@@ -112,8 +112,7 @@ store.add_item({
 print_store_matrix(create_items_matrix(store))
 ```
 
-you can also delete an item by its id
-ex:
+you can also delete an item by its id.
 
 ```
 store.delete_item(1)
