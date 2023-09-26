@@ -41,6 +41,8 @@ At this point, you can interact with the program, calling all the methods availa
 
 ---
 
+<br>
+
 Create an instance of a store.
 
 ```python
