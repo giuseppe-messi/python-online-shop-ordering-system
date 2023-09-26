@@ -1,7 +1,11 @@
 # Welcome to my online shop ordering system in Python!
 
+<br>
+
 > to best view this README file you can either use a text editor that support markdown preview, or you could visit the github repository where this project live! this is the link:
 > https://github.com/giuseppe-messi/python-online-shop-ordering-system
+
+<br>
 
 The following is just a flow example on how to populate the store with categories and items and how a customer can add items to their order and then make a payment.
 
