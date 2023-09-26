@@ -127,7 +127,7 @@ giuseppe = Customer(
     "name": "giuseppe",
     "surname": "message",
     "email": "email@email.com",
-    "address": "12 address, London, N89RU",
+    "address": "12 address, London, N00SP",
     },
 )
 ```
