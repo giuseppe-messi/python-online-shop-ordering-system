@@ -145,10 +145,13 @@ payment_giuseppe.make_payment()
 
 `Store`
 
-| Class        | Properties                      | Methods                       |
-| ------------ | ------------------------------- | ----------------------------- |
-| `'Store'`    | - categories - items            | 'Isn't this fun?'             |
-| `'Category'` | `"Isn't this fun?"`             | "Isn't this fun?"             |
-| `'Item'`     | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
+| Properties/Methods      | Description                                            |
+| ----------------------- | ------------------------------------------------------ |
+| categories              | 'A dictionary to store categories as key-value pairs.' |
+| items                   | 'A dictionary to store items as key-value pairs.'      |
+| add_category(name)      | 'Method to add a new category to the store.'           |
+| add_item(item_info)     | 'Method to add a new item to the store.'               |
+| get_item_by_id(item_id) | 'Method to retrieve an item by its ID.'                |
+| delete_item(id)         | 'Method to delete an item from the store by its ID.'   |
 
 ### Thanks! I hope you enjoyed my simple online shopping system!
