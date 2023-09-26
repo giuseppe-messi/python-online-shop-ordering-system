@@ -160,52 +160,52 @@ Detailed description of each class used in this project!
 
 #### Category Class
 
-| Properties/Methods | Description                                               |
-| ------------------ | --------------------------------------------------------- |
-| name               | Property to store the name of the category.               |
-| items              | A dictionary to store items within the category.          |
-| add_item(item)     | Method to add an item to the category's items dictionary. |
+| Properties/Methods | Description                                               | Space - Time Complexity |
+| ------------------ | --------------------------------------------------------- | :---------------------: |
+| name               | Property to store the name of the category.               |       O(1) - O(1)       |
+| items              | A dictionary to store items within the category.          |       O(1) - O(1)       |
+| add_item(item)     | Method to add an item to the category's items dictionary. |       O(1) - O(1)       |
 
 #### Item Class
 
-| Properties/Methods | Description                                 |
-| ------------------ | ------------------------------------------- |
-| id                 | Property to store the ID of the item.       |
-| name               | Property to store the name of the item.     |
-| price              | Property to store the price of the item.    |
-| product_category   | Property to store the category of the item. |
+| Properties/Methods | Description                                 | Space - Time Complexity |
+| ------------------ | ------------------------------------------- | :---------------------: |
+| id                 | Property to store the ID of the item.       |       O(1) - O(1)       |
+| name               | Property to store the name of the item.     |       O(1) - O(1)       |
+| price              | Property to store the price of the item.    |       O(1) - O(1)       |
+| product_category   | Property to store the category of the item. |       O(1) - O(1)       |
 
 #### Customer Class
 
-| Properties/Methods | Description                                                                    |
-| ------------------ | ------------------------------------------------------------------------------ |
-| store              | Property to store a reference to the store.                                    |
-| name               | Property to store the customer's name.                                         |
-| surname            | Property to store the customer's surname.                                      |
-| email              | Property to store the customer's email address.                                |
-| address            | Property to store the customer's address.                                      |
-| order              | Property to store an instance of the Order class associated with the customer. |
+| Properties/Methods | Description                                                                    | Space - Time Complexity |
+| ------------------ | ------------------------------------------------------------------------------ | :---------------------: |
+| store              | Property to store a reference to the store.                                    |       O(1) - O(1)       |
+| name               | Property to store the customer's name.                                         |       O(1) - O(1)       |
+| surname            | Property to store the customer's surname.                                      |       O(1) - O(1)       |
+| email              | Property to store the customer's email address.                                |       O(1) - O(1)       |
+| address            | Property to store the customer's address.                                      |       O(1) - O(1)       |
+| order              | Property to store an instance of the Order class associated with the customer. |       O(1) - O(1)       |
 
 #### Order Class
 
-| Properties/Methods   | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| customer             | Property to store a reference to the customer associated with the order.                    |
-| store                | Property to store a reference to the store associated with the order.                       |
-| items                | A dictionary to store items in the order.                                                   |
-| add_item(item_id)    | Method to add an item to the order by item ID.                                              |
-| get_total_price()    | Method to calculate and return the total price of the items in the order.                   |
-| view_order()         | Method to display the contents of the order, including item names, prices, and total price. |
-| remove_item(item_id) | Method to remove an item from the order by item ID.                                         |
-| clear_order()        | Method to clear all items from the order.                                                   |
+| Properties/Methods   | Description                                                                                 | Space - Time Complexity |
+| -------------------- | ------------------------------------------------------------------------------------------- | :---------------------: |
+| customer             | Property to store a reference to the customer associated with the order.                    |       O(1) - O(1)       |
+| store                | Property to store a reference to the store associated with the order.                       |       O(1) - O(1)       |
+| items                | A dictionary to store items in the order.                                                   |       O(1) - O(1)       |
+| add_item(item_id)    | Method to add an item to the order by item ID.                                              |       O(1) - O(1)       |
+| get_total_price()    | Method to calculate and return the total price of the items in the order.                   |       O(1) - O(1)       |
+| view_order()         | Method to display the contents of the order, including item names, prices, and total price. |       O(1) - O(1)       |
+| remove_item(item_id) | Method to remove an item from the order by item ID.                                         |       O(1) - O(1)       |
+| clear_order()        | Method to clear all items from the order.                                                   |       O(1) - O(1)       |
 
 #### Payment Class
 
-| Properties/Methods | Description                                                                |
-| ------------------ | -------------------------------------------------------------------------- |
-| customer           | Property to store a reference to the customer associated with the payment. |
-| order              | Property to store a reference to the customer's order.                     |
-| make_payment()     | Method to process a payment for the customer's order.                      |
+| Properties/Methods | Description                                                                | Space - Time Complexity |
+| ------------------ | -------------------------------------------------------------------------- | :---------------------: |
+| customer           | Property to store a reference to the customer associated with the payment. |       O(1) - O(1)       |
+| order              | Property to store a reference to the customer's order.                     |       O(1) - O(1)       |
+| make_payment()     | Method to process a payment for the customer's order.                      |       O(1) - O(1)       |
 
 <br>
 
@@ -213,14 +213,14 @@ Detailed description of each class used in this project!
 
 Description of utility functions used in the program!
 
-| Function Name                    | Description                                                                                                                                                                                    |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| handle_operation_errors(method)  | A decorator function that catches common error types (TypeError, ValueError, KeyError) when calling other functions and prints error messages if they occur.                                   |
-| is_valid_category(name)          | Validates that the input name is a non-empty string and raises errors for invalid input types or empty names.                                                                                  |
-| is_valid_item_info(item_info)    | Validates the structure of item information in the item_info dictionary, checking for required fields and their data types.                                                                    |
-| is_valid_customer(customer_info) | Validates the structure of customer information in the customer_info dictionary, checking for required fields and their data types.                                                            |
-| print_store_matrix(matrix)       | Formats and prints a tabular matrix, adjusting column widths to align data neatly. It includes a header row, a separator, and content rows.s                                                   |
-| create_items_matrix(store)       | Generates a matrix (2D list) representing item information in a store, including item name, stock, price, category, and ID. This matrix can be used for tabular display or further processing. |
+| Function Name                    | Description                                                                                                                                                                                    | Space - Time Complexity |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------: |
+| handle_operation_errors(method)  | A decorator function that catches common error types (TypeError, ValueError, KeyError) when calling other functions and prints error messages if they occur.                                   |       O(1) - O(1)       |
+| is_valid_category(name)          | Validates that the input name is a non-empty string and raises errors for invalid input types or empty names.                                                                                  |       O(1) - O(1)       |
+| is_valid_item_info(item_info)    | Validates the structure of item information in the item_info dictionary, checking for required fields and their data types.                                                                    |       O(1) - O(1)       |
+| is_valid_customer(customer_info) | Validates the structure of customer information in the customer_info dictionary, checking for required fields and their data types.                                                            |       O(1) - O(1)       |
+| print_store_matrix(matrix)       | Formats and prints a tabular matrix, adjusting column widths to align data neatly. It includes a header row, a separator, and content rows.s                                                   |       O(1) - O(1)       |
+| create_items_matrix(store)       | Generates a matrix (2D list) representing item information in a store, including item name, stock, price, category, and ID. This matrix can be used for tabular display or further processing. |       O(1) - O(1)       |
 
 <br>
 
