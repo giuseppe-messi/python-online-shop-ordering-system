@@ -1,6 +1,8 @@
 # Welcome to my online shop ordering system in Python!
 
-### Suggestions on how to use this program:
+### How to use this program:
+
+#### The following is just a flow example on how to populate the store with categories and items and how a customer can add items to their order and then make a payment.
 
 Navigate to the project root directory in the terminal and open the Python interpreter:
 
@@ -25,8 +27,6 @@ from utils import print_store_matrix, create_items_matrix
 ---
 
 From this point, you can interact with the program, calling all the methods available to create an online store.
-
-The following is just an example flow on how to populate the store with categories and items and how a customer can add items to their order and then make a payment.
 
 Following this example are detailed descriptions of each class used to create this project!
 
