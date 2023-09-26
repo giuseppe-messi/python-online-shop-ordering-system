@@ -113,7 +113,11 @@ print_store_matrix(create_items_matrix(store))
 ```
 
 you can also delete an item by its id
-ex: `store.delete_item(1)`
+ex:
+
+```
+store.delete_item(1)
+```
 
 After the store has been populated, we can create a customer!
 
