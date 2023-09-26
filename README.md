@@ -124,7 +124,7 @@ giuseppe.order.add_item(4)
 giuseppe.order.view_order()
 ```
 
-Then we create a payment instance, which takes a customer as its only argument and calls the make_payment method:
+Then we create a payment instance, which takes a customer as its only argument and calls the `make_payment` method:
 
 ```
 payment_giuseppe = Payment(giuseppe)
