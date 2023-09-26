@@ -4,7 +4,9 @@
 
 Navigate to the project root directory in the terminal and open the Python interpreter:
 
-`python3`
+```
+python3
+```
 
 Then, open and execute the store, customer and payment class:
 
@@ -16,17 +18,23 @@ exec(open("payment.py").read())
 
 Also, import some utility functions:
 
-`from utils import print_store_matrix, create_items_matrix`
+```
+from utils import print_store_matrix, create_items_matrix
+```
 
 From this point, you can interact with the program, calling all the methods available to create an online store.
 
 Create an instance of a store.
 
-`store = Store()`
+```
+store = Store()
+```
 
 Use the helper function to print the store items in a table format; it helps visualise the store state. I encourage you to call this function at any given time.
 
-`print_store_matrix(create_items_matrix(store))`
+```
+print_store_matrix(create_items_matrix(store))
+```
 
 Use the `add_category` and `add_item` methods to populate the store.
 I encourage you to call these methods with non-string arguments to see the error handling.
