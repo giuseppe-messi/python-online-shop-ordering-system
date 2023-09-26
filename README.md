@@ -1,5 +1,7 @@
 # Welcome to my online shop ordering system in Python!
 
+> to best view this README file you can either use a text editor that support markdown preview, or you could visit the github repository where this project live! this is the [link](https://github.com/giuseppe-messi/python-online-shop-ordering-system):
+
 The following is just a flow example on how to populate the store with categories and items and how a customer can add items to their order and then make a payment.
 
 Following this example are detailed descriptions of each class used to create this project!
@@ -151,10 +153,10 @@ Detailed description of each class used in this project!
 
 | Properties/Methods      | Description                                          | Space - Time Complexity |
 | ----------------------- | ---------------------------------------------------- | :---------------------: |
-| categories              | A dictionary to store categories as key-value pairs. |       O(1) - O(1)       |
-| items                   | A dictionary to store items as key-value pairs.      |       O(1) - O(1)       |
+| categories              | A dictionary to store categories as key-value pairs. |       O(n) - O(1)       |
+| items                   | A dictionary to store items as key-value pairs.      |       O(n) - O(1)       |
 | add_category(name)      | Method to add a new category to the store.           |       O(1) - O(1)       |
-| add_item(item_info)     | Method to add a new item to the store.               |       O(1) - O(1)       |
+| add_item(item_info)     | Method to add a new item to the store.               |       O(1) - O(n)       |
 | get_item_by_id(item_id) | Method to retrieve an item by its ID.                |       O(1) - O(1)       |
 | delete_item(id)         | Method to delete an item from the store by its ID.   |       O(1) - O(1)       |
 
@@ -163,7 +165,7 @@ Detailed description of each class used in this project!
 | Properties/Methods | Description                                               | Space - Time Complexity |
 | ------------------ | --------------------------------------------------------- | :---------------------: |
 | name               | Property to store the name of the category.               |       O(1) - O(1)       |
-| items              | A dictionary to store items within the category.          |       O(1) - O(1)       |
+| items              | A dictionary to store items within the category.          |       O(n) - O(1)       |
 | add_item(item)     | Method to add an item to the category's items dictionary. |       O(1) - O(1)       |
 
 #### Item Class
