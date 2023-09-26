@@ -9,7 +9,7 @@
 
 The following is a flow example of how to populate the store with categories and items and how a customer can add items to their order and then pay.
 
-At the end, detailed descriptions of each class used to create this project are detailed!
+At the end, descriptions of each class used to create this project are detailed!
 
 <br>
 
