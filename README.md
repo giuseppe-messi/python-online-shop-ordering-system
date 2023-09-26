@@ -4,6 +4,8 @@ The following is just a flow example on how to populate the store with categorie
 
 Following this example are detailed descriptions of each class used to create this project!
 
+<br>
+
 ### How to use this program:
 
 Navigate to the project root directory in the terminal and open the Python interpreter:
@@ -139,6 +141,8 @@ payment_giuseppe = Payment(giuseppe)
 payment_giuseppe.make_payment()
 ```
 
+<br>
+
 ## Classes
 
 Detailed description of each class used in this project!
@@ -217,5 +221,7 @@ Description of utility functions used in the program!
 | is_valid_customer(customer_info) | Validates the structure of customer information in the customer_info dictionary, checking for required fields and their data types.                                                            |
 | print_store_matrix(matrix)       | Formats and prints a tabular matrix, adjusting column widths to align data neatly. It includes a header row, a separator, and content rows.s                                                   |
 | create_items_matrix(store)       | Generates a matrix (2D list) representing item information in a store, including item name, stock, price, category, and ID. This matrix can be used for tabular display or further processing. |
+
+<br>
 
 ### Thanks! I hope you enjoyed my simple online shopping system!
