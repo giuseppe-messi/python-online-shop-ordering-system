@@ -23,7 +23,7 @@ python3
 
 In order to properly run the program from the interpreter, we need to import some files; open and execute the store, customer and payment class:
 
-```
+```python
 exec(open("store.py").read())
 exec(open("customer.py").read())
 exec(open("payment.py").read())
@@ -31,7 +31,7 @@ exec(open("payment.py").read())
 
 Also, import some utility functions:
 
-```
+```python
 from utils import print_store_matrix, create_items_matrix
 ```
 
@@ -43,13 +43,13 @@ From this point, you can interact with the program, calling all the methods avai
 
 Create an instance of a store.
 
-```
+```python
 store = Store()
 ```
 
 Use the helper function to print the store items in a table format; it helps visualise the store state. I encourage you to call this function at any given time.
 
-```
+```python
 print_store_matrix(create_items_matrix(store))
 ```
 
@@ -58,14 +58,14 @@ I encourage you to call these methods with non-string arguments to see the error
 
 #### accepted category:
 
-```
+```python
 store.add_category("technology")
 store.add_category("kitchen")
 ```
 
 #### not accepted category:
 
-```
+```python
 store.add_category("")
 store.add_category(3456)
 store.add_category(True)
@@ -135,7 +135,7 @@ giuseppe = Customer(
 
 Now, via the `order` class inside the customer instance, you can add and delete items by ID and view the order; the item has to exist; otherwise, an error will happen.
 
-```
+```python
 giuseppe.order.add_item(1)
 giuseppe.order.add_item(4)
 giuseppe.order.view_order()
@@ -143,7 +143,7 @@ giuseppe.order.view_order()
 
 Then we create a payment instance, which takes a customer as its only argument and calls the `make_payment` method:
 
-```
+```python
 payment_giuseppe = Payment(giuseppe)
 payment_giuseppe.make_payment()
 ```
