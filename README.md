@@ -1,6 +1,6 @@
 # Welcome to my online shop ordering system in Python!
 
-### Some suggestions on how to view this project:
+### Some suggestions on how to interact with this project:
 
 Navigate to the project root directory in the terminal and open the Python interpreter:
 
@@ -8,7 +8,7 @@ Navigate to the project root directory in the terminal and open the Python inter
 python3
 ```
 
-Then, open and execute the store, customer and payment class:
+In order to properly run the program from the interpreter, we need to import some files; open and execute the store, customer and payment class:
 
 ```
 exec(open("store.py").read())
