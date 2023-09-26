@@ -147,8 +147,7 @@ payment_giuseppe.make_payment()
 
 | Class        | Properties                      | Methods                       |
 | ------------ | ------------------------------- | ----------------------------- |
-| `'Store'`    | - categories                    | 'Isn't this fun?'             |
-|              | - items                         |                               |
+| `'Store'`    | - categories - items            | 'Isn't this fun?'             |
 | `'Category'` | `"Isn't this fun?"`             | "Isn't this fun?"             |
 | `'Item'`     | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
 
