@@ -1,10 +1,10 @@
 # Welcome to my online shop ordering system in Python!
 
-### How to use this program:
-
 The following is just a flow example on how to populate the store with categories and items and how a customer can add items to their order and then make a payment.
 
 Following this example are detailed descriptions of each class used to create this project!
+
+### How to use this program:
 
 Navigate to the project root directory in the terminal and open the Python interpreter:
 
