@@ -2,6 +2,11 @@ from type_definitions import CustomerInfoType, ItemInfoType
 
 
 def handle_operation_errors(method):
+    """
+    A decorator that catches common exceptions (TypeError, ValueError, KeyError)
+    and prints an error message if any of these exceptions occur during method execution.
+    """
+
     def wrapper(*args, **kwargs):
         try:
             return method(*args, **kwargs)
@@ -12,6 +17,10 @@ def handle_operation_errors(method):
 
 
 def is_valid_category(name: str):
+    """
+    Check if a category name is valid.
+    """
+
     if not isinstance(name, str):
         raise TypeError("Category name must be a string!")
     if not name:
@@ -19,6 +28,10 @@ def is_valid_category(name: str):
 
 
 def is_valid_item_info(item_info: ItemInfoType):
+    """
+    Check if item information is valid.
+    """
+
     for value, value_type in ItemInfoType.items():
         if value not in item_info:
             raise KeyError(f"{value} value is not defined!")
@@ -29,6 +42,10 @@ def is_valid_item_info(item_info: ItemInfoType):
 
 
 def is_valid_customer(customer_info: CustomerInfoType):
+    """
+    Check if customer information is valid.
+    """
+
     for field, field_type in CustomerInfoType.items():
         if field not in customer_info:
             raise KeyError(f"{field} field is not defined!")
@@ -39,6 +56,10 @@ def is_valid_customer(customer_info: CustomerInfoType):
 
 
 def print_store_matrix(matrix):
+    """
+    Print a matrix of store data with formatted columns.
+    """
+
     column_widths = [
         max(len(str(item)) for item in column) + 2 for column in zip(*matrix)
     ]
@@ -68,6 +89,10 @@ def print_store_matrix(matrix):
 
 
 def create_items_matrix(store):
+    """
+    Create a matrix representation of store items.
+    """
+
     matrix = [["Item", "Price", "Category", "Id"]]
 
     for item in store.items.values():

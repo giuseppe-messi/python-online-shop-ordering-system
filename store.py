@@ -16,6 +16,10 @@ class Store:
 
     @handle_operation_errors
     def add_category(self, name: str):
+        """
+        Add a new category to the store.
+        """
+
         is_valid_category(name)
 
         if name in self.categories:
@@ -26,6 +30,10 @@ class Store:
 
     @handle_operation_errors
     def add_item(self, item_info: ItemInfoType):
+        """
+        Add a new item to the store.
+        """
+
         is_valid_item_info(item_info)
 
         product_category = item_info.get("product_category")
@@ -46,6 +54,10 @@ class Store:
 
     @handle_operation_errors
     def get_item_by_id(self, item_id: int):
+        """
+        Get an item from the store by its ID.
+        """
+
         item = self.items.get(item_id)
         if not item:
             raise KeyError(f"Item with id: {item_id} does not exist!")
@@ -54,6 +66,10 @@ class Store:
 
     @handle_operation_errors
     def delete_item(self, id: int):
+        """
+        Delete an item from the store by its ID.
+        """
+
         if id in self.items:
             del self.items[id]
             print(f"\n\nItem with id: {id} removed from store!\n\n")

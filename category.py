@@ -4,4 +4,8 @@ class Category:
         self.items = {}
 
     def add_item(self, item):
+        """
+        Add an item to the category.
+        """
+
         self.items[item.id] = item

@@ -4,6 +4,10 @@ class Payment:
         self.order = customer.order
 
     def make_payment(self):
+        """
+        Process a payment for the customer's order.
+        """
+
         item_list = [item.name for item in self.order.items.values()]
 
         print(item_list)
