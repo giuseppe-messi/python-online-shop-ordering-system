@@ -8,14 +8,15 @@ class Order:
         self.items = {}
 
     @handle_operation_errors
-    def add_item(self, item_id):
+    def add_item(self, item_id: int):
         if not isinstance(item_id, int):
             raise ValueError("Item id must be of type number!")
 
         item = self.store.get_item_by_id(item_id)
+
         if item:
             self.items[item_id] = item
-            print(f"{item.name} successfully added to your order!")
+            print(f"\n\n{item.name} successfully added to your order!\n\n")
 
     def get_total_price(self):
         total = sum(item.price for item in self.items.values())
@@ -23,19 +24,21 @@ class Order:
 
     def view_order(self):
         if not self.items.values():
-            print("Your order is empty! Add some items!")
+            print("\n\nYour order is empty! Add some items!\n\n")
         else:
-            print("Your order:")
+            print("\n\nYour order:")
+
             for item in self.items.values():
                 print(f"   - {item.name} at: {item.price}! (id: {item.id})")
             total = self.get_total_price()
-            print(f"Total: {total}")
+
+            print(f"Total: {total}\n\n")
 
     @handle_operation_errors
-    def remove_item(self, item_id):
+    def remove_item(self, item_id: int):
         if item_id in self.items:
             del self.items[item_id]
-            print(f"Item with id: {item_id} removed from order!")
+            print(f"\n\nItem with id: {item_id} removed from order!\n\n")
         else:
             raise KeyError("Item not found in order!")
 

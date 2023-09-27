@@ -1,46 +1,35 @@
+from type_definitions import CustomerInfoType, ItemInfoType
+
+
 def handle_operation_errors(method):
     def wrapper(*args, **kwargs):
         try:
             return method(*args, **kwargs)
         except (TypeError, ValueError, KeyError) as e:
-            print(f"Error: {e}")
+            print(f"\n\nError: {e}\n\n")
 
     return wrapper
 
 
-def is_valid_category(name):
+def is_valid_category(name: str):
     if not isinstance(name, str):
         raise TypeError("Category name must be a string!")
     if not name:
         raise ValueError("Category name cannot be empty!")
 
 
-def is_valid_item_info(item_info):
-    required_fields = {
-        "id": int,
-        "name": str,
-        "price": (float, int),
-        "product_category": str,
-    }
-
-    for field, field_type in required_fields.items():
-        if field not in item_info:
-            raise KeyError(f"{field} field is not defined!")
-        elif not isinstance(item_info[field], field_type):
-            raise TypeError(f"Invalid type for field: {field}")
+def is_valid_item_info(item_info: ItemInfoType):
+    for value, value_type in ItemInfoType.items():
+        if value not in item_info:
+            raise KeyError(f"{value} value is not defined!")
+        elif not isinstance(item_info[value], value_type):
+            raise TypeError(f"Invalid type for value: {value}")
 
     return True
 
 
-def is_valid_customer(customer_info):
-    required_fields = {
-        "name": str,
-        "surname": str,
-        "email": str,
-        "address": str,
-    }
-
-    for field, field_type in required_fields.items():
+def is_valid_customer(customer_info: CustomerInfoType):
+    for field, field_type in CustomerInfoType.items():
         if field not in customer_info:
             raise KeyError(f"{field} field is not defined!")
         elif not isinstance(customer_info[field], field_type):

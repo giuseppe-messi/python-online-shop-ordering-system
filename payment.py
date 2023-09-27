@@ -9,11 +9,11 @@ class Payment:
         print(item_list)
         if not self.order.items.values():
             print(
-                "Error: Your order is empty. Add items to your order before making a payment!"
+                "\n\nError: Your order is empty. Add items to your order before making a payment!\n\n"
             )
         else:
             item_list = [item.name for item in self.order.items.values()]
             items_string = ", ".join(item_list)
             total = self.order.get_total_price()
             self.order.clear_order()
-            print(f"Sucess! You just bought: {items_string} for {total}")
+            print(f"\n\nSucess! You just bought: {items_string} for {total}\n\n")

@@ -81,7 +81,7 @@ store.add_category(True)
 store.add_item({
     "id": 1,
     "name": "phone",
-    "price": 10,
+    "price": 10.00,
     "product_category": "technology",
 })
 ```
@@ -94,21 +94,21 @@ A poorly formatted item would have one of the mandatory values missing, some of 
 store.add_item({
     "id": 2,
     "name": "spoons",
-    "price": 8,
+    "price": 8.00,
     "product_category": "kitchen"
 })
 
 store.add_item({
     "id": 3,
     "name": "TV",
-    "price": 800,
+    "price": 800.00,
     "product_category": "technology"
 })
 
 store.add_item({
     "id": 4,
     "name": "speakers",
-    "price": 200,
+    "price": 200.00,
     "product_category": "technology",
 })
 
