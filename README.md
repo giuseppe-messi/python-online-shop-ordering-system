@@ -21,15 +21,13 @@ Navigate to the project root directory in the terminal and open the Python inter
 python3
 ```
 
-To properly run the program from the interpreter, we need to import some files, which are the store, customer and payment classes:
+To properly run the program from the interpreter, we need to import the main.py file, copy and paste this code into the interpreter:
 
 ```python
-exec(open("store.py").read())
-exec(open("customer.py").read())
-exec(open("payment.py").read())
+exec(open("main.py").read())
 ```
 
-Also, import some utility functions:
+Also, import some utility functions that live in the utils.py file:
 
 ```python
 from utils import print_store_matrix, create_items_matrix
